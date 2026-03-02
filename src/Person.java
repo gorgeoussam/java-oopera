@@ -4,7 +4,6 @@ public class Person {
     protected Gender gender;
 
 
-
     public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class MusicalShow extends Show{
+public class MusicalShow extends Show {
     private MusicAuthor musicAuthor;
     private String librettoText;
 
@@ -12,7 +12,7 @@ public class MusicalShow extends Show{
         this.librettoText = librettoText;
     }
 
-    public void printLibrettoText(){
+    public void printLibrettoText() {
         System.out.println(this.librettoText);
     }
 

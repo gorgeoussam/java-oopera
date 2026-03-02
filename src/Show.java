@@ -15,13 +15,13 @@ public class Show {
 
 
     public void printDirector() {
-        System.out.println(this.director.name+" "+this.director.surname);
+        System.out.println(this.director.name + " " + this.director.surname);
     }
 
-    public void printCast(){
+    public void printCast() {
         System.out.println("Cast:");
         for (Actor actor : listOfActors) {
-            System.out.println(actor.getName()+ " " + actor.getSurname()+" ("+actor.getHeight()+")");
+            System.out.println(actor.getName() + " " + actor.getSurname() + " (" + actor.getHeight() + ")");
         }
     }
 
@@ -32,20 +32,30 @@ public class Show {
             listOfActors.add(actor);
         }
     }
-    public void replaceActor(Actor newActor, String surname) {
-        for (int i = 0; i < listOfActors.size(); i++) {
-            Actor currentActor = listOfActors.get(i);
 
-            if (currentActor.getSurname().equals(surname)) {
-                listOfActors.set(i, newActor);
-                System.out.println("Актёр с фамилией " + surname + " заменён.");
-                return;
-            }
+    public void replaceActor(Actor newActor, String surname) {
+
+        int count = 0;
+        int index = -1;
+
+        for (int i = 0; i < listOfActors.size(); i++) {
+            if (listOfActors.get(i).getSurname().equals(surname)) count++;
+            index = i;
         }
 
-        // если не нашли
-        System.out.println("Актёр с фамилией " + surname + " не найден.");
+        if (count == 0) {
+            System.out.println("Actor with name " + surname + " not found");
+        } else if (count >= 1) {
+            System.out.println("Multiply duplicates found " + count);
+        } else {
+            listOfActors.set(index, newActor);
+            System.out.println("Actor +" + surname + " is replaced");
+        }
+
     }
-    }
+
+
+}
+
 
 

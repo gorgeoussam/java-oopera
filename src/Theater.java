@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Theater{
+public class Theater {
 
 
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Theater{
 
         MusicalShow regular = new MusicalShow("Rgular", 1, Quentin, Hans, "not sure what it is");
         Opera opera = new Opera("Opera", 2, Steven, Hans, "cool opera", 314);
-        Ballet ballet = new Ballet("Ballet", 3,Quentin, Hans, "cool ballet", Name, Hans);
+        Ballet ballet = new Ballet("Ballet", 3, Quentin, Hans, "cool ballet", Name, Hans);
 
         regular.addActor(Brad);
         opera.addActor(Tom);
