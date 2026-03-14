@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Show {
     private String title;
     private int duration;
-    private final Director director;
+    private Director director;
     private final ArrayList<Actor> listOfActors;
 
     public Show(String title, int duration, Director director) {
